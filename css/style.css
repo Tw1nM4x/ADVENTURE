@@ -1,0 +1,742 @@
+@font-face {
+	font-family: 'Main';
+	src: url('../fonts/Comforter-Regular.ttf');
+}
+@font-face {
+	font-family: 'Inter';
+	src: url('../fonts/Inter.ttf');
+}
+@font-face {
+	font-family: 'Arsenal-Bold';
+	src: url('../fonts/Arsenal-Bold.ttf');
+}
+body {
+	font-style: normal;
+font-weight: 500;
+font-size: 24px;
+    font-family: 'Inter';
+    //background: url(../img/fon.png) no-repeat top center;
+    background-size: 100%;
+    background-attachment: local;
+    margin: 0;
+    background-color: #F5F5F5;
+}
+.mouse-parallax {
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+}
+.mouse-parallax-bg {
+    position: absolute;
+    background-image: url('../img/fon.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 110%;
+    height: 110%;
+    transition: all 0.1s ease;
+}
+.sky-fon{
+  background:url('../img/fon-sky.png') no-repeat top center;
+  background-size: 100%;
+  //background-attachment: fixed;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+   width:100%; /*width of your image*/
+   height:660px; /*height of your image*/
+   margin:0; /* If you want no margin */
+   padding:0; /*if your want to padding */
+}
+.before-fon{
+  background:url('../img/before-fon.png') no-repeat top center;
+  background-size: 100%;
+  //background-attachment: fixed;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+   width:100%; /*width of your image*/
+   height:660px; /*height of your image*/
+   margin:0; /* If you want no margin */
+   padding:0; /*if your want to padding */
+}
+.fon{
+  background:url('../img/fon.png') no-repeat top center;
+  background-size: 100%;
+  //background-attachment: fixed;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+   width:100%; /*width of your image*/
+   height:660px; /*height of your image*/
+   margin:0; /* If you want no margin */
+   padding:0; /*if your want to padding */
+}
+nav {
+	position: fixed;
+    width: 100%;
+    height: 59px;
+    margin: 0 auto;
+}
+nav::before {
+    content:'';
+    display: block;
+    height: 59px;
+    width: 100%;
+		background: rgba(255, 255, 255, 0.6);
+    position: absolute;
+    z-index: -1;
+}
+ul {
+    height: 59px;
+    width: 1058px;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+}
+ul li {
+    float: left;
+}
+ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 59px;
+    margin-right: 35px;
+}
+ul li a:hover {
+    text-decoration: none;
+    border-bottom: 3px #000 solid;
+    padding-bottom: 3px;
+}
+.logo {
+    font-family: 'Arsenal-Bold';
+    font-size: 24px;
+    margin-left: 58px;
+    margin-right: 360px;
+}
+#entrance {
+    margin-left: 0px;
+    border: solid 3px black;
+    padding-top: 5px;
+		padding-bottom: 5px;
+		padding-left: 12px;
+		padding-right: 12px;
+}
+.text {
+		font-family: 'Main';
+    width: 420px;
+    height: 123px;
+    font-size: 55px;
+    color: #fff;
+    margin: 0 auto;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+.navbar {
+    padding-bottom: 173px;
+}
+.order {
+    width: 164px;
+    height: 50px;
+    background: #ffffff;
+    font-size: 26px;
+    line-height: 42px;
+    font-weight: bold;
+    margin: 0 auto;
+    margin-top: 12px;
+    text-align: center;
+    margin-bottom: 100px;
+}
+.ordertext {
+    color: #118DFF;
+    text-decoration: none;
+    line-height: 50px;
+}
+.order:hover {
+	width: 155px;
+	height: 48px;
+	background: #F4FAFF;
+	font-size: 24px;
+	line-height: 0px;
+	font-weight: bold;
+	margin: 0 auto;
+	margin-top: 13px;
+	text-align: center;
+	margin-bottom: 101px;
+}
+.tour-main {
+    width: 946px;
+    height: 345px;
+    margin: 0 auto;
+    margin-top: 120px;
+    display: flex;
+}
+.tour-main1 {
+    width: 293px;
+    height: 345px;
+    margin-right: 32px;
+    background: #fff;
+}
+.tour-main-image1 {
+    width: 293px;
+    height: 164px;
+    background-image: url(../img/maldives.png);
+}
+.tour-main-text1 {
+    width: 293px;
+    height: 181px;
+    text-align: center;
+}
+.tour-name1 {
+    width: 293px;
+    height: 50px;
+    font-size: 24px;
+    line-height: 50px;
+}
+.line1 {
+    width: 193px;
+    height: 0;
+    margin-left: 51px;
+    border: 1px solid #c6bebe;
+    background: #c6bebe;
+}
+.tour-description1 {
+    width: 218px;
+    height: 57px;
+    margin-left: 38px;
+    font-size: 18px;
+    line-height: 22px;
+    color: #898989;
+    margin-top: 15px;
+}
+
+.tour-more-detailed1 {
+    width: 136px;
+    height: 40px;
+    border: solid 3px #32ceff;
+    margin-left: 77px;
+    margin-top: 1px;
+    font-size: 18px;
+    line-height: 22px;
+    color: #32ceff;
+}
+.detailed1 {
+    line-height: 40px;
+}
+.tour-main2 {
+    width: 293px;
+    height: 345px;
+    margin-right: 32px;
+    background: #fff;
+}
+.tour-main-image2 {
+    width: 293px;
+    height: 164px;
+    background-image: url(../img/bali.png);
+}
+.tour-main-text2 {
+    width: 293px;
+    height: 181px;
+}
+.tour-name2 {
+    width: 293px;
+    height: 50px;
+    font-size: 24px;
+    line-height: 50px;
+    text-align: center;
+}
+.line2 {
+    width: 193px;
+    height: 0;
+    margin-left: 51px;
+    border: 1px solid #c6bebe;
+    background: #c6bebe;
+}
+.tour-description2 {
+    width: 218px;
+    height: 57px;
+    margin-left: 38px;
+    font-size: 18px;
+    line-height: 22px;
+    color: #898989;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.tour-more-detailed2 {
+    width: 136px;
+    height: 40px;
+    border: solid 3px #32ceff;
+    margin-left: 77px;
+    margin-top: 1px;
+    font-size: 18px;
+    line-height: 22px;
+    color: #32ceff;
+}
+.detailed2 {
+    line-height: 40px;
+    text-align: center;
+}
+.tour-main3 {
+    width: 293px;
+    height: 345px;
+    margin-right: 32px;
+    background: #fff;
+}
+.tour-main-image3 {
+    width: 293px;
+    height: 164px;
+    background-image: url(../img/venice.png);
+}
+.tour-main-text3 {
+    width: 293px;
+    height: 181px;
+}
+.tour-name3 {
+    width: 293px;
+    height: 50px;
+    font-size: 24px;
+    line-height: 50px;
+    text-align: center;
+}
+.line3 {
+    width: 193px;
+    height: 0;
+    margin-left: 51px;
+    border: 1px solid #c6bebe;
+    background: #c6bebe;
+}
+.tour-description3 {
+    width: 218px;
+    height: 57px;
+    margin-left: 38px;
+    font-size: 18px;
+    line-height: 22px;
+    color: #898989;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.tour-more-detailed3 {
+    width: 136px;
+    height: 40px;
+    border: solid 3px #32ceff;
+    margin-left: 77px;
+    margin-top: 1px;
+    font-size: 18px;
+    line-height: 22px;
+    color: #32ceff;
+}
+.detailed3 {
+    line-height: 40px;
+    text-align: center;
+}
+.detailedcolor {
+    text-decoration: none;
+    color: #32ceff;
+}
+.button-main {
+    display: flex;
+    width: 104.08px;
+    height: 38.01px;
+    margin: 0 auto;
+    margin-top: 25px;
+    margin-bottom: 70px;
+}
+.button-l {
+    width: 38.01px;
+    height: 38.42px;
+    margin-right: 28.06px;
+    background: url(../img/button-l.png);
+    cursor: pointer;
+}
+.button-r {
+    width: 38.01px;
+    height: 38.42px;
+    background: url(../img/button-r.png);
+    cursor: pointer;
+}
+.steps-text {
+    width: 943px;
+    height: 138px;
+    margin: 0 auto;
+    font-size: 48px;
+    line-height: 138px;
+    text-align: center;
+    text-shadow: 0px 4px 4px rgba(0,0,0,0.1);
+    color: #4e4e4e;
+}
+.steps {
+    display: flex;
+    width: 943px;
+    height: 338px;
+    margin: 0 auto;
+    margin-bottom: 36px;
+}
+#steps {
+    box-shadow: 0px 0px 55px -18px rgba(0, 0, 0, 0.10);
+    width: 299px;
+    height: 320px;
+    background-color: #ffffff;
+}
+.steps-1 {
+    margin-right: 23px;
+}
+.steps-number-1 {
+    width: 299px;
+    height: 38px;
+    font-weight: bold;
+    font-size: 31px;
+    text-align: center;
+    color: #118dff;
+    margin-top: 28px;
+}
+.steps-text-block-1 {
+    width: 299px;
+    text-align: center;
+    font-size: 31px;
+    color: #4e4e4e;
+}
+.steps-line {
+    width: 212px;
+    height: 0;
+    margin-left: 44px;
+    margin-top: 8px;
+    border: 1px solid #c6bebe;
+    background: #c6bebe;
+}
+.steps-text-block-11 {
+    width: 229px;
+    height: 176px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 16px;
+    font-size: 21px;
+    color: #8e8e8e;
+}
+.steps-2 {
+    margin-right: 23px;
+}
+.steps-number-2 {
+    width: 299px;
+    height: 38px;
+    font-weight: bold;
+    font-size: 31px;
+    text-align: center;
+    color: #118dff;
+    margin-top: 28px;
+}
+.steps-text-block-2 {
+    width: 299px;
+    text-align: center;
+    font-size: 31px;
+    color: #4e4e4e;
+}
+.steps-line {
+    width: 212px;
+    height: 0;
+    margin-left: 44px;
+    margin-top: 8px;
+    border: 1px solid #c6bebe;
+    background: #c6bebe;
+}
+.steps-text-block-22 {
+    width: 229px;
+    height: 176px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 16px;
+    font-size: 21px;
+    color: #8e8e8e;
+}
+.steps-number-3 {
+    width: 299px;
+    height: 38px;
+    font-weight: bold;
+    font-size: 31px;
+    text-align: center;
+    color: #118dff;
+    margin-top: 28px;
+}
+.steps-text-block-3 {
+    width: 299px;
+    text-align: center;
+    font-size: 31px;
+    color: #4e4e4e;
+}
+.steps-line {
+    width: 212px;
+    height: 0;
+    margin-left: 44px;
+    margin-top: 8px;
+    border: 1.5px solid #c6bebe;
+    background: #c6bebe;
+}
+.steps-text-block-33 {
+    width: 229px;
+    height: 176px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 16px;
+    font-size: 21px;
+    color: #8e8e8e;
+}
+.steps-to-contact {
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.25);
+    width: 250px;
+    height: 75px;
+    background: #369fff;
+    margin: 0 auto;
+    font-weight: bold;
+    line-height: 75px;
+    font-size: 36px;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 100px;
+}
+.steps-to-contact:hover {
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.25);
+    width: 245px;
+    height: 71px;
+    background: #1790FF;
+    margin: 0 auto;
+    font-weight: bold;
+    line-height: 75px;
+    font-size: 34px;
+    text-align: center;
+    color: #ffffff;
+		margin-top: 50px;
+    margin-bottom: 90px;
+}
+.steps-link {
+    cursor: pointer;
+}
+.tours-text-main {
+    width: 621px;
+    height: 119px;
+    margin: 0 auto;
+    text-align: center;
+    color: #4e4e4e;
+    font-size: 48px;
+    line-height: 119px;
+    text-shadow: 0px 4px 4px rgba(0,0,0,0.25);
+}
+.tours {
+    width: 944px;
+    height: 705px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+#tours {
+    margin-top: 0;
+}
+#atour {
+		height: 50px;
+		width: 100px;
+}
+#aabout-us {
+    margin-bottom: 80px;
+		height: 50px;
+		width: 100px;
+}
+#tours-line2 {
+    margin-top: 27px;
+}
+
+.about-us {
+    width: 621px;
+    height: 115px;
+    text-align: center;
+    line-height: 115px;
+    font-size: 48px;
+    text-shadow: 0px 4px 4px rgba(0,0,0,0.25);
+    margin: 0 auto;
+    margin-top: -80px;
+    color: #4e4e4e;
+}
+.about-us-text {
+    width: 560px;
+    height: 166px;
+    font-size: 24px;
+    text-align: center;
+    margin: 0 auto;
+    color: #969696;
+}
+.about-us-image {
+    width: 621px;
+    height: 379px;
+    border-radius: 93px;
+    background: url(../img/about.png);
+    margin: 0 auto;
+    margin-bottom: 70px;
+}
+
+::-webkit-scrollbar {
+    background: transparent;
+    width: 10px;
+   }
+   ::-webkit-scrollbar-thumb {
+    background-color: #C2C2C2;
+    box-shadow: inset 0 0 5px #AEAEAE;
+   }
+   ::-webkit-scrollbar-thumb:hover {
+    background-color: #8A8A8A;
+   }
+   ::-webkit-scrollbar-thumb:active {
+    background-color: #727272;
+    box-shadow: inset 0 0 5px #595959;
+   }
+   ::-webkit-scrollbar-track:hover {
+    background-color: #E6E6E6;
+    border: 1px solid #CFCFCF;
+   }
+   ::-webkit-scrollbar-corner {
+    background: transparent;
+   }
+
+	 #reviews {
+	 		height: 1px;
+	 		width: 100px;
+	 }
+   .reviews-text {
+    width: 621px;
+    height: 148px;
+    margin: 0 auto;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    text-align: center;
+    line-height: 148px;
+    font-size: 48px;
+    color: #4e4e4e;
+    text-shadow: 0 4px 4px rgba(0,0,0,0.25);
+}
+.reviews {
+    width: 1439px;
+    height: 997px;
+    margin: 0 auto;
+}
+.reviews-content {
+    width: 882px;
+    height: 646px;
+    border: solid 2px gray;
+    margin: 0 auto;
+}
+footer {
+ width: 100%;
+ height: 211px;
+ background: #afb7b9;
+ margin-top: 120px;
+}
+.footer-content {
+    width: 100%;
+    height: 152px;
+}
+.footer-text {
+    width: 100%;
+    height: 59px;
+    background: #a1a7ab;
+}
+#fotter-text {
+    width: 266px;
+    height: 59px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 59px;
+    color: #d0d1d1;
+    font-size: 24px;
+}
+#footer-contant {
+    width: 664px;
+    height: 137px;
+    margin: 0 auto;
+}
+.footer-name-number {
+    display: flex;
+}
+.footer-name {
+    font-family: 'Arsenal-Bold';
+    width: 334px;
+    height: 80px;
+    text-align: center;
+    line-height: 80px;
+    font-size: 46px;
+    color: #ffffff;
+}
+.footer-number {
+    width: 330px;
+    height: 80px;
+    display: flex;
+}
+.phone-image {
+    width: 41px;
+    height: 42px;
+    margin-top: 20px;
+    background-image: url(../img/phone.png);
+    margin-right: 10px;
+}
+.phone-number-footer {
+    width: 289px;
+    height: 42px;
+    margin-top: 20px;
+    font-size: 30px;
+    color: #ffffff;
+    line-height: 42px;
+    text-align: left;
+}
+.footer-mail {
+    display: flex;
+}
+.footer-icons {
+    width: 235px;
+    height: 42px;
+    margin-left: 30px;
+    margin-right: 80px;
+    display: flex;
+}
+.footer-twit {
+    width: 43px;
+    height: 42px;
+    margin-right: 17px;
+    background-image: url(../img/twitter.png);
+}
+.footer-fb {
+    width: 43px;
+    height: 42px;
+    margin-right: 17px;
+    background-image: url(../img/facebook.png);
+}
+.footer-tg {
+    width: 43px;
+    height: 42px;
+    margin-right: 17px;
+    background-image: url(../img/telegram.png);
+}
+.footer-inst {
+    width: 43px;
+    height: 42px;
+    background-image: url(../img/instagram.png);
+}
+#mail {
+    width: 332px;
+    height: 41px;
+    display: flex;
+}
+.mail-image {
+    width: 41px;
+    height: 41px;
+    background-image: url(../img/mail.png);
+    margin-right: 10px;
+}
+.mail-text {
+    width: 290px;
+    height: 41px;
+    font-size: 30px;
+    line-height: 41px;
+    color: #ffffff;
+}

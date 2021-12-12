@@ -1,0 +1,204 @@
+@font-face {
+	font-family: 'Main';
+	src: url('../fonts/Comforter-Regular.ttf');
+}
+@font-face {
+	font-family: 'Inter';
+	src: url('../fonts/Inter.ttf');
+}
+@font-face {
+	font-family: 'Arsenal-Bold';
+	src: url('../fonts/Arsenal-Bold.ttf');
+}
+nav {
+	position: fixed;
+    width: 100%;
+    height: 59px;
+    margin: 0 auto;
+}
+nav::before {
+    content:'';
+    display: block;
+    height: 59px;
+    width: 100%;
+		background: rgba(255, 255, 255, 0.6);
+    position: absolute;
+    z-index: -1;
+}
+ul {
+    height: 59px;
+    width: 1058px;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+}
+ul li {
+    float: left;
+}
+ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 59px;
+    margin-right: 35px;
+}
+ul li a:hover {
+    text-decoration: none;
+    border-bottom: 3px #000 solid;
+    padding-bottom: 3px;
+}
+.logo {
+    font-family: 'Arsenal-Bold';
+    font-size: 24px;
+    margin-left: 58px;
+    margin-right: 360px;
+}
+#entrance {
+    margin-left: 0px;
+    border: solid 3px black;
+    padding-top: 5px;
+		padding-bottom: 5px;
+		padding-left: 12px;
+		padding-right: 12px;
+}
+.text {
+		font-family: 'Main';
+    width: 420px;
+    height: 123px;
+    font-size: 55px;
+    color: #fff;
+    margin: 0 auto;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+.navbar {
+    font-family: 'Inter';
+    padding-bottom: 130px;
+}
+.order {
+    width: 164px;
+    height: 50px;
+    background: #ffffff;
+    font-size: 26px;
+    line-height: 42px;
+    font-weight: bold;
+    margin: 0 auto;
+    margin-top: 12px;
+    text-align: center;
+    margin-bottom: 100px;
+}
+.ordertext {
+    color: #118DFF;
+    text-decoration: none;
+    line-height: 50px;
+}
+.order:hover {
+	width: 155px;
+	height: 48px;
+	background: #F4FAFF;
+	font-size: 24px;
+	line-height: 0px;
+	font-weight: bold;
+	margin: 0 auto;
+	margin-top: 13px;
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+
+body{
+  margin: 0;
+	padding: 0;
+	min-height: 100vh;
+
+	background-color: #F5F5F5;
+}
+.container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Inter';
+}
+.main{
+	width: 350px;
+	height: 510px;
+	background: red;
+	overflow: hidden;
+	background: url("https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38") no-repeat center/ cover;
+  background-color: #fff;
+	box-shadow: 0px 0px 55px -18px rgba(0, 0, 0, 0.1);
+}
+#chk{
+	display: none;
+}
+.signup{
+	position: relative;
+	width:100%;
+	height: 100%;
+}
+label{
+	color: #000;
+	font-size: 2em;
+	justify-content: center;
+	display: flex;
+	margin: 40px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: .5s ease-in-out;
+}
+input{
+    font-family: 'Inter';
+	width: 60%;
+	height: 20px;
+	background: rgba(255, 255, 255, 1);
+	justify-content: center;
+	display: flex;
+	margin: 20px auto;
+	padding: 10px;
+	border: 2px solid #CACACA;
+	outline: none;
+}
+button{
+    font-family: 'Inter';
+	width: 60%;
+	height: 40px;
+	margin: 10px auto;
+	justify-content: center;
+	display: block;
+	color: #fff;
+	background: #369fff;
+	font-size: 1em;
+	font-weight: bold;
+	margin-top: 20px;
+	outline: none;
+	border: none;
+	transition: .2s ease-in;
+	cursor: pointer;
+}
+button:hover{
+	background: #0376E1;
+}
+.login{
+	height: 400px;
+	background: #fff;
+	transform: translateY(-150px);
+	transition: .8s ease-in-out;
+}
+.login label{
+	color: #CACACA;
+	transform: scale(.6);
+}
+
+#chk:checked ~ .login{
+	transform: translateY(-500px);
+}
+#chk:checked ~ .login label{
+  color: #000;
+	transform: scale(1);
+}
+#chk:checked ~ .signup label{
+  color: #CACACA;
+	transform: scale(.6);
+}
