@@ -10,10 +10,19 @@
 	font-family: 'Arsenal-Bold';
 	src: url('../fonts/Arsenal-Bold.ttf');
 }
+.scroll{
+	width: 100px;
+	height: 100px;
+	overflow: scroll;
+}
+.menu{
+	display: flex;
+	justify-content: flex-end;
+}
 body {
 	font-style: normal;
-font-weight: 500;
-font-size: 24px;
+	font-weight: 500;
+	font-size: 24px;
     font-family: 'Inter';
     //background: url(../img/fon.png) no-repeat top center;
     background-size: 100%;
@@ -92,7 +101,7 @@ nav::before {
 }
 ul {
     height: 59px;
-    width: 1058px;
+    width: 1016px;
     margin: 0 auto;
     padding: 0;
     list-style: none;
@@ -116,11 +125,11 @@ ul li a:hover {
 .logo {
     font-family: 'Arsenal-Bold';
     font-size: 24px;
-    margin-left: 58px;
-    margin-right: 360px;
+    margin-left: 34px;
+    margin-right: 0px;
 }
 #entrance {
-    margin-left: 0px;
+    margin-left: 10px;
     border: solid 3px black;
     padding-top: 5px;
 		padding-bottom: 5px;
@@ -622,10 +631,17 @@ ul li a:hover {
     margin: 0 auto;
 }
 .reviews-content {
+	  overflow: scroll;
     width: 882px;
-    height: 646px;
+    height: 450px;
     border: solid 2px gray;
     margin: 0 auto;
+}
+.review{
+		width: 862px;
+		height: 200px;
+		margin: 10px;
+		background: red;
 }
 footer {
  width: 100%;

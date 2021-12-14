@@ -15,20 +15,25 @@
     <div id="amain"></div>
     <div class="navbar">
         <nav>
-            <ul class="menu">
+            <ul>
                 <li><a href="#amain" class="logo">ADVENTURE</a></li>
-                <li><a href="#amain">Главная</a></li>
-                <li><a href="#atour">Туры</a></li>
-                <li><a href="#aabout-us">О нас</a></li>
-                <li><a href="#reviews">Отзывы</a></li>
-                <li><a href="login.php" id="entrance">Войти</a></li>
+                <div class="menu">
+                  <li><a href="#amain">Главная</a></li>
+                  <li><a href="#atour">Туры</a></li>
+                  <li><a href="#aabout-us">О нас</a></li>
+                  <li><a href="#reviews">Отзывы</a></li>
+                  <?php if($_COOKIE['first-name'] == NULL): ?>
+                    <li><a href="login.php" id="entrance">Войти</a></li>
+                  <?php else: ?>
+                    <li><a href="profile.php" id="entrance"><?php echo $_COOKIE['first-name']; ?></a></li>
+                  <?php endif; ?>
+                </div>
             </ul>
         </nav>
     </div>
     <div class="text" id="">
         <center>Турагенство<br>Отдых мечты</center>
     </div>
-
     <div class="tour-main">
         <div class="tour-main1">
             <div class="tour-main-image1"></div>
@@ -162,7 +167,16 @@
     <div class="reviews">
         <div id="reviews"></div>
         <div class="reviews-text">Отзывы</div>
-        <div class="reviews-content"></div>
+        <div class="reviews-content">
+          <div class="review"></div>
+          <div class="review"></div>
+          <div class="review"></div>
+          <div class="review"></div>
+          <div class="review"></div>
+          <div class="review"></div>
+          <div class="review"></div>
+          <div class="review"></div>
+        </div>
     </div>
     <div id="aabout-us"></div>
     <div class="about">
