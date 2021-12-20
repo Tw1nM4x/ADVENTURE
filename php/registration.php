@@ -47,7 +47,7 @@
   //$message = 'Что бы подтвердить Email, перейдите по http://www.sitefrommax.com/confirm_email/?token=' . $token . '';
   //mail("$email", 'Подтвердите ваш email', $message, 'From: sitefrommax@gmail.com');
 
-  $mysql->query("INSERT INTO `user`(`first-name`,`last-name`,`email`,`password`,`hidden-password`,`token`) VALUES('$first_name', '$last_name', '$email', '$password','$hidden_password', '$token')");
+  $mysql->query("INSERT INTO `user`(`first-name`,`last-name`,`email`,`password`,`hidden-password`,`avatar`,`token`) VALUES('$first_name', '$last_name', '$email', '$password','$hidden_password', 'default.jpg','$token')");
 
   $mysql->close();
 

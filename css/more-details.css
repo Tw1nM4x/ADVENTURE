@@ -1,0 +1,254 @@
+@font-face {
+	font-family: 'Main';
+	src: url('../fonts/Comforter-Regular.ttf');
+}
+@font-face {
+	font-family: 'Inter';
+	src: url('../fonts/Inter.ttf');
+}
+@font-face {
+	font-family: 'Arsenal-Bold';
+	src: url('../fonts/Arsenal-Bold.ttf');
+}
+textarea {
+	  background: none;
+		border: none;
+    resize: none;
+}
+body {
+		font-style: normal;
+		font-weight: 500;
+		font-size: 24px;
+    font-family: 'Inter';
+    background-size: 100%;
+    background-attachment: local;
+    margin: 0;
+    background-color: #F5F5F5;
+}
+nav {
+	position: fixed;
+    width: 100%;
+    height: 59px;
+    margin: 0 auto;
+}
+nav::before {
+    content:'';
+    display: block;
+    height: 59px;
+    width: 100%;
+		background: rgba(255, 255, 255, 0.6);
+    position: absolute;
+    z-index: -1;
+}
+ul {
+    height: 59px;
+    width: 1016px;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+}
+ul li {
+    float: left;
+}
+ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 59px;
+    margin-right: 35px;
+}
+ul li a:hover {
+    text-decoration: none;
+    border-bottom: 3px #000 solid;
+    padding-bottom: 3px;
+}
+.logo {
+    font-family: 'Arsenal-Bold';
+    font-size: 24px;
+    margin-left: 34px;
+    margin-right: 0px;
+}
+#entrance {
+    margin-left: 10px;
+    border: solid 3px black;
+    padding-top: 5px;
+		padding-bottom: 5px;
+		padding-left: 12px;
+		padding-right: 12px;
+}
+.text {
+		font-family: 'Main';
+    width: 420px;
+    height: 123px;
+    font-size: 55px;
+    color: #fff;
+    margin: 0 auto;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+.navbar {
+    padding-bottom: 100px;
+}
+.addnavbar {
+    padding-bottom: 70px;
+}
+.menu{
+		display: flex;
+		justify-content: flex-end;
+}
+.main-md {
+    width: 1000px;
+    height: 500px;
+    margin: 0 auto;
+    display: flex;
+		justify-content: space-around;
+}
+.name-md {
+		font-family: 'Inter';
+    width: 900px;
+    height: 60px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+
+    font-weight: 500;
+    font-size: 48px;
+    text-align: center;
+    letter-spacing: -0.017em;
+    color: #4E4E4E;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+}
+.addname-md {
+		display: flex;
+		font-family: 'Inter';
+    width: 800px;
+    height: 60px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+
+    font-weight: 500;
+    font-size: 48px;
+    text-align: center;
+    letter-spacing: -0.017em;
+    color: #4E4E4E;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+}
+.foto-md {
+    width: 450px;
+    height: 500px;
+    margin: 0 auto;
+		border-radius: 20px;
+}
+.addfoto-md {
+    width: 338px;
+    height: 375px;
+    margin: 0 auto;
+		border-radius: 20px;
+		margin-bottom: 10px;
+}
+.description-md {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+    width: 450px;
+    height: 480px;
+    margin: 0 auto;
+		background: white;
+		border-radius: 20px;
+		padding-top: 20px;
+}
+.description-text {
+		font-size: 0.8em;
+		margin: 0 auto;
+    width: 410px;
+    height: 400px;
+		font-family: 'Inter';
+		justify-content: center;
+		display: flex;
+		text-align: center;
+		align-items: center;
+}
+.price-md {
+		font-family: 'Inter';
+	  display: flex;
+    width: 370px;
+    height: 50px;
+    margin: auto;
+    margin-top: 30px;
+		font-size: 0.8em;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		border-top: 2px solid #c6bebe;
+}
+button {
+	margin: 0 auto;
+		font-family: 'Inter';
+    width: 300px;
+    height: 66px;
+    background: #369fff;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 28px;
+    color: #ffffff;
+    line-height: 66px;
+    align-items: center;
+    text-align: center;
+    outline: none;
+  	border: none;
+  	transition: .2s ease-in;
+  	cursor: pointer;
+}
+button:hover{
+  background: #0376E1;
+}
+.button{
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+}
+.upload-file__input {
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+    overflow: hidden;
+    width: 0.4px;
+    height: 0.4px;
+}
+
+.upload-file__label {
+    display: flex;
+		width: 300px;
+		height: 66px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    max-width: 300px;
+    border: 2px dashed black;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.upload-file__icon {
+    width: 25px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.upload-file__label .upload-file__text,
+.upload-file__label .upload-file__icon path {
+    transition: .15s ease;
+}
+
+.upload-file__label:hover .upload-file__text {
+    color: #369fff;
+}
+
+.upload-file__label:hover .upload-file__icon path {
+    fill: #369fff;
+}
+
+.upload-file__label:hover {
+    border: 2px dashed #369fff;
+}

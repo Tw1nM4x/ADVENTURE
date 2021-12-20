@@ -10,12 +10,15 @@
 
 <body>
   <script type="text/javascript" src="scripts/profile.js"></script>
+  <?php if($_COOKIE['first-name'] == NULL){
+    header('Location: /');
+  }?>
   <div class="load-avatar" onclick="NewAvatar()">
     <div class="loadavatar">
-      <form action="" method="post" enctype="multipart/form-data">
+      <form action="../php/avatar.php" method="post" enctype="multipart/form-data">
         <input
             type="file"
-            name="files[]"
+            name="avatar"
             id="upload-file__input_1"
             class="upload-file__input"
             accept=".jpg, .jpeg, .png"
@@ -28,27 +31,24 @@
             </svg>
             <span class="upload-file__text">Прикрепить файл</span>
         </label>
-        <button type="sumbit" name = "set_avatar">Отправить</button>
+        <button type="sumbit" name = "set_avatar">Изменить</button>
       </form>
     </div>
   </div>
-  <?php if($_COOKIE['first-name'] == NULL){
-    header('Location: /');
-  }?>
   <div class="navbar">
       <nav>
           <ul class="menu">
               <li><a href="index.php#amain" class="logo">ADVENTURE</a></li>
               <li><a href="index.php#amain">Главная</a></li>
               <li><a href="index.php#atour">Туры</a></li>
+              <li><a href="index.php#reviews">Отзывы</a></li>
               <li><a href="index.php#aabout-us">О нас</a></li>
-              <li><a href="">Отзывы</a></li>
               <li><a href="php/exit.php" id="entrance">Выйти</a></li>
           </ul>
       </nav>
   </div>
     <div class="avatar" onclick="NewAvatar()">
-      <img src="avatars/<?php echo $_COOKIE['avatar'];?>" class="avatar">
+      <img src="../avatars/<?php echo $_COOKIE['avatar'];?>" class="avatar">
       <img src="img/photo.png" class="load-photo">
     </div>
     <div class="info">

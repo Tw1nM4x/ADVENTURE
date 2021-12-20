@@ -9,6 +9,27 @@
 </head>
 <body>
     <script type="text/javascript" src="scripts/main.js"></script>
+    <div class="review-send">
+      <div class="review-send-fon" onclick="SendReview()"></div>
+        <form action="../php/review.php" method="post" class="review-send-front">
+            <div class="reviews-text" style="margin-top: 0px; line-height: 30px;
+            font-size: 40px; height: 60px;">Мой отзыв</div>
+            <div class="rating">
+              <input type="radio" required name="stars" value="5" id="rating-5">
+              <label for="rating-5">★</label>
+              <input type="radio" required name="stars" value="4" id="rating-4">
+              <label for="rating-4">★</label>
+              <input type="radio" required name="stars" value="3" id="rating-3">
+              <label for="rating-3">★</label>
+              <input type="radio" required name="stars" value="2" id="rating-2">
+              <label for="rating-2">★</label>
+              <input type="radio" required name="stars" value="1" id="rating-1">
+              <label for="rating-1">★</label>
+            </div>
+            <textarea name="review" id="review" required cols="30" rows="4" placeholder="Введите отзыв" maxlength="200"></textarea>
+            <button type="sumbit" id="button">Отправить</button>
+        </form>
+    </div>
     <section class="sky-fon"> </section>
     <section class="fon"> </section>
     <section class="before-fon"> </section>
@@ -20,8 +41,8 @@
                 <div class="menu">
                   <li><a href="#amain">Главная</a></li>
                   <li><a href="#atour">Туры</a></li>
-                  <li><a href="#aabout-us">О нас</a></li>
                   <li><a href="#reviews">Отзывы</a></li>
+                  <li><a href="#aabout-us">О нас</a></li>
                   <?php if($_COOKIE['first-name'] == NULL): ?>
                     <li><a href="login.php" id="entrance">Войти</a></li>
                   <?php else: ?>
@@ -35,37 +56,27 @@
         <center>Турагенство<br>Отдых мечты</center>
     </div>
     <div class="tour-main">
+      <?php
+        require "php/connect2sql.php";
+        $tour = 1;
+        while($tour < 4){
+        $result = $mysql->query("SELECT * FROM `tours` WHERE `id` = '$tour'");
+        $tours = $result->fetch_assoc();
+        echo '
         <div class="tour-main1">
-            <div class="tour-main-image1"></div>
+            <img src="../img/tours/small/' .$tours['id']. '.png" class="tour-main-image1">
             <div class="tour-main-text1">
-                <div class="tour-name1">Мальдивы
+                <div class="tour-name1">' .$tours['name']. '
                     <div class="line1"></div>
                 </div>
-                <div class="tour-description1">Не забываемый отдых <br> на краю океана.</div>
-                <div class="tour-more-detailed1"><div class="detailed1"><a href="" class="detailedcolor">Подробнее</a></div></div>
+                <div class="tour-description1">' .$tours['review']. '</div>
+                <div class="tour-more-detailed1"><div class="detailed1"><a href="../more-details.php?tour=' .$tours['id']. '" class="detailedcolor">Подробнее</a></div></div>
             </div>
         </div>
-        <div class="tour-main2">
-            <div class="tour-main-image2"></div>
-            <div class="tour-main-text2">
-                <div class="tour-name2">Бали
-                    <div class="line2"></div>
-                </div>
-                <div class="tour-description2">Наслаждайтесь каждой <br> секундой.</div>
-                <div class="tour-more-detailed2"><div class="detailed2"><a href="" class="detailedcolor">Подробнее</a></div></div>
-            </div>
-        </div>
-        <div class="tour-main3">
-            <div class="tour-main-image3"></div>
-            <div class="tour-main-text3">
-                <div class="tour-name3">Венеция
-                    <div class="line3"></div>
-                </div>
-                <div class="tour-description3">Страна которая поразит <br> вас своей красотой.</div>
-                <div class="tour-more-detailed3"><div class="detailed3"><a href="" class="detailedcolor">Подробнее</a></div></div>
-            </div>
-            </div>
-        </div>
+        ';
+        $tour = $tour + 1;
+       }
+       ?>
     </div>
     <div class="button-main">
         <div class="button-l"></div>
@@ -92,7 +103,7 @@
             <div class="steps-text-block-33">Закажите тур и через <br> несколько дней <br> наслаждайтесь <br> незабываемым <br> отпуском</div>
         </div>
     </div>
-    <a class="steps-link"><div class="steps-to-contact">Связаться</div></a>
+    <a class="steps-link"><div class="steps-to-contact" onclick="Phone()">Связаться</div></a>
     <div id="atour"></div>
     <div class="tours-text-main">Туры</div>
     <div class="tours">
@@ -104,7 +115,7 @@
                         <div class="line1"></div>
                     </div>
                     <div class="tour-description1">Не забываемый отдых <br> на краю океана.</div>
-                    <div class="tour-more-detailed1"><div class="detailed1"><a href="" class="detailedcolor">Подробнее</a></div></div>
+                    <div class="tour-more-detailed1"><div class="detailed1"><a href="add-tour.php" class="detailedcolor">Подробнее</a></div></div>
                 </div>
             </div>
             <div class="tour-main2">
@@ -165,18 +176,43 @@
 
     </div>
     <div class="reviews">
-        <div id="reviews"></div>
+      <div id="reviews"></div>
         <div class="reviews-text">Отзывы</div>
         <div class="reviews-content">
-          <div class="review"></div>
-          <div class="review"></div>
-          <div class="review"></div>
-          <div class="review"></div>
-          <div class="review"></div>
-          <div class="review"></div>
-          <div class="review"></div>
-          <div class="review"></div>
+        <?php
+          require "php/connect2sql.php";
+
+          $query = mysqli_query($mysql, "SELECT * FROM `reviews` ORDER BY `id` DESC");
+
+          if(!mysqli_num_rows($query)) exit('Пока пусто');
+
+          while($row = mysqli_fetch_assoc($query)){
+          $email = $row['email'];
+          $result = $mysql->query("SELECT * FROM `user` WHERE `email` = '$email'");
+          $users = $result->fetch_assoc();
+          echo '
+          <div class="review">
+              <div class="review-content">
+                  <img src="../avatars/' .$users['avatar']. '" class="review-avatar">
+                  <div class="review-name-text">
+                      <div class="review-name">' .$row['name']. '</div>
+                      <div class="stars">'; if($row['stars'] == 1) echo '★';
+                      if($row['stars'] == 2) echo '★★';
+                      if($row['stars'] == 3) echo '★★★';
+                      if($row['stars'] == 4) echo '★★★★';
+                      if($row['stars'] == 5) echo '★★★★★';
+                      echo '</div>
+                      <div class="review-text">' .$row['text']. '</div>
+                  </div>
+              </div>
+          </div>';
+          }
+          $mysql->close();
+        ?>
         </div>
+        <?php if($_COOKIE['first-name'] != NULL): ?>
+        <div class="button-review-send" onclick="SendReview()">Написать отзыв</div>
+        <?php endif; ?>
     </div>
     <div id="aabout-us"></div>
     <div class="about">

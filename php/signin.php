@@ -14,11 +14,11 @@
     exit();
   }
 
+  setcookie('avatar', $user['avatar'], time() + 3600, "/");
   setcookie('email', $user['email'], time() + 3600, "/");
   setcookie('first-name', $user['first-name'], time() + 3600, "/");
   setcookie('last-name', $user['last-name'], time() + 3600, "/");
   setcookie('password', $user['hidden-password'], time() + 3600, "/");
-  setcookie('avatar', 'default.jpg', time() + 3600, "/");
 
   $mysql->close();
 

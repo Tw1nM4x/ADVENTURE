@@ -15,14 +15,12 @@ document.addEventListener('DOMContentLoaded', () => {
     inputFile.forEach(function(el) {
         let textSelector = document.querySelector('.upload-file__text');
         let fileList;
-        // Событие выбора файла(ов)
+        // Событие выбора файла
         el.addEventListener('change', function (e) {
-            // создаём массив файлов
             fileList = [];
             for (let i = 0; i < 1; i++) {
                 fileList.push(el.files[i]);
             }
-            // вызов функции для каждого файла
             fileList.forEach(file => {
                 uploadFile(file);
             });
@@ -36,6 +34,5 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             textSelector.textContent = file.name;
         }
-
     });
 });

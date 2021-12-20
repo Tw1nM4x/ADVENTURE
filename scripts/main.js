@@ -35,3 +35,15 @@ function Scroll(e)
    bg_before.setAttribute("style", "background-position: " + 0 + "px " + bg_before_speed * parallax + "px;");
    bg_sky.setAttribute("style", "background-position: " + 0 + "px " + bg_sky_speed * parallax + "px;");
 }
+
+function SendReview(){
+  let ReviewSend = document.querySelector('.review-send');
+  if(ReviewSend.style.display == 'flex')
+  ReviewSend.style.display = 'none';
+  else
+  ReviewSend.style.display = 'flex';
+}
+
+function Phone(){
+  alert("Позвоните по телефону 8(999)999-99-99");
+}
